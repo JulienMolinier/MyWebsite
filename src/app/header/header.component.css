@@ -1,5 +1,5 @@
 .body {
-  background-image: linear-gradient(to bottom, rgba(69, 72, 77, 0), rgba(0, 0, 0, 1)), url(/assets/images/font.jpg);
+  background-image: linear-gradient(to bottom, rgba(69, 72, 77, 0), rgba(0, 0, 0, 1)), url(assets/images/font.jpg);
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 3%;
