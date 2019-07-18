@@ -19,6 +19,7 @@ import {SkillsListComponent} from './skills-list/skills-list.component';
 import {LanguageCardComponent} from './language-card/language-card.component';
 import {FlexModule} from '@angular/flex-layout';
 import {BarRatingModule} from 'ngx-bar-rating';
+import {ItskillCardComponent} from './itskill-card/itskill-card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {BarRatingModule} from 'ngx-bar-rating';
     CvComponent,
     CareerCardComponent,
     SkillsListComponent,
-    LanguageCardComponent
+    LanguageCardComponent,
+    ItskillCardComponent
   ],
   imports: [
     BrowserModule,

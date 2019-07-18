@@ -1,8 +1,17 @@
 <div class="body">
-  <h1>Skills</h1>
-  <div fxLayout="row" fxLayoutAlign="center center">
-    <div *ngFor="let language of languageList" class="languageCard">
+  <h1>Language Skills</h1>
+  <div class="flex">
+    <div *ngFor="let language of languageList" class="card">
       <app-language-card [language]="language"></app-language-card>
     </div>
   </div>
+  <br>
+  <br>
+  <h1>IT Skills</h1>
+  <div class="flex">
+    <div *ngFor="let itSkill of itSkillsList" class="card">
+      <app-itskill-card [itSkill]="itSkill"></app-itskill-card>
+    </div>
+  </div>
+
 </div>

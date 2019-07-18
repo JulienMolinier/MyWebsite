@@ -1,0 +1,16 @@
+img {
+  width: 18em;
+  height: 10em;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: BBE;
+  font-size: 2.5em;
+}
