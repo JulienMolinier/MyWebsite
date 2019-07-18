@@ -12,13 +12,13 @@ export class HeaderComponent implements OnInit {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private router: Router) {
     iconRegistry.addSvgIcon(
       'home',
-      sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/home-solid.svg'));
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/home-solid.svg'));
     iconRegistry.addSvgIcon(
       'files',
-      sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/folder-open-solid.svg'));
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/folder-open-solid.svg'));
     iconRegistry.addSvgIcon(
       'contact',
-      sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/id-badge-solid.svg'));
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/id-badge-solid.svg'));
   }
 
   ngOnInit() {
