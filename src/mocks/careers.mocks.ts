@@ -6,7 +6,7 @@ export const CAREER_MOCKED: Career[] = [
     company: 'Leclerc Drive (SOGARDIS)',
     location: '30100 Alès (France)',
     description: 'A 3 months summer job with a fixed-term contract. Preparation and delivery of orders, resupplying',
-    picturePath: '../assets/images/leclerc.jpg',
+    picturePath: 'assets/images/leclerc.jpg',
     linkToCompanyWebsite: 'https://www.leclercdrive.fr/region-occitanie-pyrenees-mediterranee/ales/drive-ales.aspx',
   },
   {
@@ -14,7 +14,7 @@ export const CAREER_MOCKED: Career[] = [
     company: 'Super U',
     location: '30140 Anduze (France)',
     description: 'A 2 months summer job with a fixed-term contract',
-    picturePath: '../assets/images/superu.png',
+    picturePath: 'assets/images/superu.png',
     linkToCompanyWebsite: 'https://www.magasins-u.com/superu-anduze',
   },
   {
@@ -22,7 +22,7 @@ export const CAREER_MOCKED: Career[] = [
     company: 'Bigmitch',
     location: '75009 Paris (France)',
     description: 'Learning of basic programming in HTML/CSS',
-    picturePath: '../assets/images/bigmitch.png',
+    picturePath: 'assets/images/bigmitch.png',
     linkToCompanyWebsite: 'https://www.bigmitch.io/mitchup-startup-program',
   },
 ];

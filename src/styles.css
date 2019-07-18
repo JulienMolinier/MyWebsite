@@ -4,22 +4,22 @@
 
 @font-face {
   font-family: "BBE";
-  src: url('/assets/fonts/Behind Blue Eyes.ttf');
+  src: url('assets/fonts/Behind Blue Eyes.ttf');
 }
 
 @font-face {
   font-family: "GOB";
-  src: url('/assets/fonts/Game of Brush.ttf');
+  src: url('assets/fonts/Game of Brush.ttf');
 }
 
 @font-face {
   font-family: "FS";
-  src: url('/assets/fonts/FeatherScript.otf');
+  src: url('assets/fonts/FeatherScript.otf');
 }
 
 @font-face {
   font-family: "GBS";
-  src: url('/assets/fonts/Golden Bridge Sans.ttf');
+  src: url('assets/fonts/Golden Bridge Sans.ttf');
 }
 
 body {
