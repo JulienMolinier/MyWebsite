@@ -9,7 +9,7 @@ import {Language} from '../../models/language';
 })
 export class SkillsListComponent implements OnInit {
 
-  private languageList: Language[] = LANGUAGE_MOCKED;
+  languageList: Language[] = LANGUAGE_MOCKED;
 
   constructor() {
   }

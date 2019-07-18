@@ -9,7 +9,7 @@ import {EDUCATION_MOCKED} from '../../mocks/educations.mocks';
 })
 export class EducationListComponent implements OnInit {
 
-  private educationList: Education[] = EDUCATION_MOCKED;
+  educationList: Education[] = EDUCATION_MOCKED;
 
   constructor() {
   }
