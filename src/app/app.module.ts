@@ -15,6 +15,10 @@ import {HomeComponent} from './home/home.component';
 import {MatButtonModule, MatButtonToggleModule, MatCardModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import {CvComponent} from './cv/cv.component';
 import {CareerCardComponent} from './career-card/career-card.component';
+import {SkillsListComponent} from './skills-list/skills-list.component';
+import {LanguageCardComponent} from './language-card/language-card.component';
+import {FlexModule} from '@angular/flex-layout';
+import {BarRatingModule} from 'ngx-bar-rating';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import {CareerCardComponent} from './career-card/career-card.component';
     FooterComponent,
     HomeComponent,
     CvComponent,
-    CareerCardComponent
+    CareerCardComponent,
+    SkillsListComponent,
+    LanguageCardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,8 @@ import {CareerCardComponent} from './career-card/career-card.component';
     MatButtonToggleModule,
     MatButtonModule,
     MatCardModule,
+    FlexModule,
+    BarRatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
