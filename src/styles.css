@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: "BBE";
+  src: url('/assets/fonts/Behind Blue Eyes.ttf');
+}
+
+@font-face {
+  font-family: "GOB";
+  src: url('/assets/fonts/Game of Brush.ttf');
+}
+
+@font-face {
+  font-family: "FS";
+  src: url('/assets/fonts/FeatherScript.otf');
+}
+
+@font-face {
+  font-family: "GBS";
+  src: url('/assets/fonts/Golden Bridge Sans.ttf');
+}
+
+body {
+  background-color: #F9F9F9;
+  margin: 0;
+  padding: 0;
+}

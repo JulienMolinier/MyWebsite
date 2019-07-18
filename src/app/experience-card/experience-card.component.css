@@ -1,0 +1,45 @@
+mat-card {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+img {
+  width: 15em;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 1px 1px 12px #555;
+}
+
+mat-card-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details {
+  width: 40%;
+}
+
+.pic {
+}
+
+h1 {
+  font-family: BBE;
+  font-size: 3em;
+}
+
+h3 {
+  font-family: BBE;
+  font-size: 2em;
+  color: #555555;
+}
+
+p {
+  font-family: BBE;
+  font-size: 2em;
+  color: #555555;
+}

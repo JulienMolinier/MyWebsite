@@ -1,0 +1,51 @@
+.body {
+  background-image: linear-gradient(to bottom, rgba(69, 72, 77, 0), rgba(0, 0, 0, 1)), url(/assets/images/font.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 3%;
+}
+
+h1 {
+  font-family: GOB;
+  font-size: 1.5em;
+
+}
+
+h3 {
+  font-family: BBE;
+  font-size: 2em;
+}
+
+.buttons {
+  float: right;
+  height: 4%;
+}
+
+button {
+  background: none;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 50%;
+  color: white;
+  width: 4em;
+  height: 4em;
+  margin: 0.2em;
+}
+
+.toolbar {
+}
+
+.profilePic {
+  border-radius: 50%;
+  height: 20em;
+}
+
+.description {
+  padding-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color: white;
+  text-align: center;
+}
