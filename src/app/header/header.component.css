@@ -3,22 +3,24 @@
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   font-family: GOB;
-  font-size: 1.5em;
+  font-size: 1.5vw;
 
 }
 
 h3 {
   font-family: BBE;
-  font-size: 2em;
+  font-size: 2vw;
 }
 
 .buttons {
-  float: right;
   height: 4%;
+  align-self: flex-end;
 }
 
 button {
@@ -38,14 +40,16 @@ button {
 
 .profilePic {
   border-radius: 50%;
-  height: 20em;
+  height: 25vw;
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
   padding-top: 4%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  width: fit-content;
+  height: fit-content;
   color: white;
   text-align: center;
 }
