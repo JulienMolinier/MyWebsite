@@ -18,21 +18,24 @@ h3 {
   font-size: 2vw;
 }
 
+mat-icon {
+  height: 3vw;
+  width: 3vw;
+}
+
 .buttons {
-  height: 4%;
   align-self: flex-end;
 }
 
 button {
   background: none;
-  border-width: 2px;
+  border-width: 0.2vw;
   border-color: white;
   border-style: solid;
   border-radius: 50%;
   color: white;
-  width: 4em;
-  height: 4em;
-  margin: 0.2em;
+  width: 5vw;
+  height: 5vw;
 }
 
 .toolbar {
@@ -40,6 +43,7 @@ button {
 
 .profilePic {
   border-radius: 50%;
+  margin-bottom: 4vw;
   height: 25vw;
 }
 
@@ -47,7 +51,7 @@ button {
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding-top: 4%;
+  padding-top: 4vw;
   width: fit-content;
   height: fit-content;
   color: white;

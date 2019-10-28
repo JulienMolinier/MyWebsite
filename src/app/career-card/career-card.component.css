@@ -1,8 +1,8 @@
 mat-card {
-  width: 70%;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2%;
+  margin-top: 2vw;
 }
 
 img {
@@ -11,7 +11,7 @@ img {
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  box-shadow: 1px 1px 12px #555;
+  box-shadow: 0.1vw 0.1vw 1vw #555;
 }
 
 mat-card-content {
@@ -21,7 +21,7 @@ mat-card-content {
 }
 
 .details {
-  width: 40%;
+  width: 40vw;
 }
 
 .pic {
