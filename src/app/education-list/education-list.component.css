@@ -7,3 +7,10 @@ h1 {
 .body {
   margin-bottom: 5vw;
 }
+
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 7vw;
+  }
+}

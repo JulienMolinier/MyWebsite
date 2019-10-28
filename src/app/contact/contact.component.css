@@ -42,3 +42,17 @@ a {
 .body {
   margin-bottom: 3%;
 }
+
+@media (max-width: 450px) {
+  h1 {
+    text-align: center;
+    font-family: BBE;
+    font-size: 8vw;
+  }
+
+  p {
+    font-family: BBE;
+    font-size: 6vw;
+  }
+
+}

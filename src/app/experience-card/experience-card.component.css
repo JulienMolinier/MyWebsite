@@ -24,9 +24,6 @@ mat-card-content {
   width: 40vw;
 }
 
-.pic {
-}
-
 h1 {
   font-family: BBE;
   font-size: 3vw;
@@ -43,3 +40,23 @@ p {
   font-size: 2vw;
   color: #555555;
 }
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  img {
+    width: 30vw;
+
+  }
+}
+

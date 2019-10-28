@@ -21,3 +21,11 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 7vw;
+  }
+}
+
