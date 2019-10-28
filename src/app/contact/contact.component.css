@@ -55,4 +55,19 @@ a {
     font-size: 6vw;
   }
 
+  .linkedin {
+    width: 4vw;
+    margin-right: 2vw;
+  }
+
+  .mail {
+    width: 4vw;
+    margin-right: 2vw;
+  }
+
+  .github {
+    width: 4vw;
+    margin-right: 2vw;
+  }
+
 }
