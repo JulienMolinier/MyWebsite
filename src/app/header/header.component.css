@@ -44,8 +44,11 @@ button {
 
 .profilePic {
   border-radius: 50%;
-  margin-bottom: 4vw;
-  height: 25vw;
+  margin-bottom: 2vw;
+  width: 15vw;
+  height: 15vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description {
@@ -76,7 +79,8 @@ button {
 
   .profilePic {
     margin-bottom: 4vw;
-    height: 40vw;
+    height: 20vw;
+    width: 20vw;
   }
 
   .description {
