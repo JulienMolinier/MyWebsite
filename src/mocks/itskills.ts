@@ -12,6 +12,11 @@ export const ITSKILLS_MOCKED: ItSkill[] = [
     img: 'assets/images/office.jpg'
   },
   {
+    name: 'GitHub',
+    level: 4,
+    img: 'assets/images/github.png'
+  },
+  {
     name: 'Java',
     level: 4,
     img: 'assets/images/java.jpg'
