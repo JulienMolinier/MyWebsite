@@ -30,6 +30,20 @@ mat-icon {
   width: 50%;
 }
 
+span {
+  display: none;
+  font-family: BBE;
+  font-size: 2vw;
+}
+
+button:hover span {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, +0.5vw);
+}
+
 button {
   margin: 0.5vw;
   background: none;
@@ -68,6 +82,10 @@ button {
 
   }
 
+  button:hover span {
+    transform: translate(-50%, -25%);
+  }
+
   h3 {
     font-size: 3vw;
   }
@@ -75,6 +93,12 @@ button {
   button {
     height: 3em;
     width: 3em;
+  }
+
+  span {
+    display: none;
+    font-family: BBE;
+    font-size: 3vw;
   }
 
   .profilePic {
