@@ -1,0 +1,493 @@
+<html>
+<head>
+  <title>Syntaxe LTSA</title>
+</head>
+<body lang="EN-US" link="blue" style="" vlink="purple">
+<h1><!--[if !supportLists]--> LTSA
+</h1>
+<h2><span style="font-family: &quot;Arial Black&quot;;"><span style="">A.1<span style="">&nbsp; </span><span style="">&nbsp;</span></span></span>
+  <!--[endif]-->
+  Processus</h2>
+<p class="MsoNormal">A process is defined by a one or more local processes
+  separated by commas. The definition is terminated by a full stop. <span
+    style="font-family: &quot;Courier New&quot;;">STOP</span>
+  and <span style="font-family: &quot;Courier New&quot;;">ERROR</span>
+  are primitive local processes. </p>
+
+<p class="program"><b style=""><span style="font-family: &quot;Times New Roman&quot;;">Example<o:p></o:p></span></b></p>
+
+<p class="program"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Process = (a -&gt;
+  Local),</p>
+
+<p class="program"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>Local<span style="">&nbsp;&nbsp; </span>= (b -&gt;
+  STOP).</p>
+
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable"
+       style="border: medium none ; border-collapse: collapse;">
+  <tbody>
+  <tr style="height: 41.1pt;">
+    <td style="border: 1pt solid windowtext; padding: 0in 5.4pt; width: 90.9pt; height: 41.1pt;" valign="top"
+        width="121">
+      <p class="MsoNormal">Action Prefix<span style="">&nbsp; </span><b style=""><span
+        style="font-family: &quot;Courier New&quot;;">-&gt;</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 41.1pt;"
+      valign="top" width="353">
+      <p class="MsoToc1">If <span style="font-family: &quot;Courier New&quot;;">x</span> is an action and <span
+        style="font-family: &quot;Courier New&quot;;">P</span> a process then <span
+        style="font-family: &quot;Courier New&quot;;">(x-&gt;P)</span>
+        describes a process that initially engages in the action <span
+          style="font-family: &quot;Courier New&quot;;">x</span>
+        and then behaves exactly as described by <span style="font-family: &quot;Courier New&quot;;">P</span>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 69.45pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 69.45pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Choice <b style=""><span style="font-family: &quot;Courier New&quot;;">|</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 69.45pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">If <span style="font-family: &quot;Courier New&quot;;">x</span> and <span
+        style="font-family: &quot;Courier New&quot;;">y</span> are actions then <span
+        style="font-family: &quot;Courier New&quot;;">(x-&gt;P|y-&gt;Q)</span>
+        describes a process which initially engages in either of the actions <span
+          style="font-family: &quot;Courier New&quot;;">x</span>
+        or <span style="font-family: &quot;Courier New&quot;;">y</span>.<span style="">&nbsp; </span>After the
+        first action has occurred, the
+        subsequent behavior is described by <span style="font-family: &quot;Courier New&quot;;">P</span> if the
+        first action was <span style="font-family: &quot;Courier New&quot;;">x</span>
+        and <span style="font-family: &quot;Courier New&quot;;">Q</span>
+        if the first action was <span style="font-family: &quot;Courier New&quot;;">y</span>.<span
+          style="">&nbsp; </span>
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt;"
+      valign="top" width="121">
+      <p align="left" class="MsoNormal" style="text-align: left;">Guarded Action<br>
+        <b style=""><span style="font-family: &quot;Courier New&quot;;">when</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">The choice <span style="font-family: &quot;Courier New&quot;;">(</span><b
+        style=""><span style="font-family: &quot;Courier New&quot;;">when</span></b><span
+        style="font-family: &quot;Courier New&quot;;"> B x
+  -&gt; P | y -&gt; Q)</span> means that when the guard <span style="font-family: &quot;Courier New&quot;;">B</span> is
+        true then
+        the actions <span style="font-family: &quot;Courier New&quot;;">x</span>
+        and y are both eligible to be chosen, otherwise if <span
+          style="font-family: &quot;Courier New&quot;;">B</span> is false then
+        the action <span style="font-family: &quot;Courier New&quot;;">x</span>
+        cannot be chosen.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Alphabet<br>
+        Extension<span style="">&nbsp; </span><b style=""><span
+          style="font-family: &quot;Courier New&quot;;">+</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">The alphabet of a process is the set of actions in which
+        it can engage. <span style="font-family: &quot;Courier New&quot;;">P + S</span> extends the alphabet of
+        the process <span style="font-family: &quot;Courier New&quot;;">P</span>
+        with the actions in the set <span style="font-family: &quot;Courier New&quot;;">S</span>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<h2><!--[if !supportLists]--><span style="font-family: &quot;Arial Black&quot;;"><span style="">A.2<span
+  style="">&nbsp; </span><span style="">&nbsp;</span></span></span><!--[endif]-->Composite
+  Processes</h2>
+<p class="MsoNormal">A composite process is the parallel composition of one or
+  more processes. The definition of a composite process is preceded by <b style=""><span
+    style="font-family: &quot;Courier New&quot;;">||</span></b>.</p>
+
+<p class="program"><b style=""><span style="font-family: &quot;Times New Roman&quot;;">Example<o:p></o:p></span></b></p>
+
+<p class="program"><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>||Composite = (P ||
+  Q).</p>
+
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable"
+       style="border: medium none ; border-collapse: collapse;">
+  <tbody>
+  <tr style="">
+    <td style="border: 1pt solid windowtext; padding: 0in 5.4pt; width: 90.9pt;" valign="top" width="121">
+      <p class="MsoNormal">Parallel<br>
+        Composition <b style=""><span style="font-family: &quot;Courier New&quot;;">||</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">If <span class="java"><span style="">P</span></span> and <span class="java"><span
+        style="">Q</span></span> are processes
+        then<span class="java"><span style="">
+  (P||Q)</span></span> represents the concurrent execution of <span class="java"><span style="">P</span></span> and
+        <span class="java"><span style="">Q</span></span>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 27.6pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 27.6pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Replicator<br>
+        <b style=""><span style="font-family: &quot;Courier New&quot;;">forall</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 27.6pt;"
+      valign="top" width="353">
+      <p align="left" class="MsoNormal" style="text-align: left;"><span class="java"><b style=""><span
+        style="">forall</span></b></span><span
+        class="java"><span style=""> [i:1..N]
+  P(i) </span></span>is the parallel composition <span class="java"><span
+        style="">(P(1) || � || P(N))</span></span><span class="java"><span style=""><o:p></o:p></span></span>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 26.7pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 26.7pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Process<br>
+        Labeling <b style=""><span style="font-family: &quot;Courier New&quot;;">:</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 26.7pt;"
+      valign="top" width="353">
+      <p class="MsoToc1"><span style="">&nbsp;</span><span class="java"><span style="">a:P </span></span>prefixes
+        each label in the alphabet of <span class="java"><span style="">P</span></span> with <span class="java"><span
+          style="">a</span></span>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 37.5pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 37.5pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Process<br>
+        Sharing <b style=""><span style="font-family: &quot;Courier New&quot;;">::</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 37.5pt;"
+      valign="top" width="353">
+      <p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">{
+        a</span><sub><span style="font-family: &quot;Courier New&quot;;">1</span></sub><span style="font-family: &quot;Courier New&quot;;">,..,a</span><sub><span style="font-family: &quot;Courier New&quot;;">x</span></sub><span style="font-family: &quot;Courier New&quot;;">}::P</span>
+        replaces every label <span class="java"><span style="">n</span></span>
+        in the alphabet of <span class="java"><span style="">P</span></span>
+        with the labels <span class="java"><span style="">a</span></span><span class="java"><sub><span style="">1</span></sub></span><span
+          class="java"><span style="">.n,�,a</span></span><sub>x</sub><span class="java"><span
+          style="">.n</span></span>.<span class="java"><span style=""> </span></span>Further,
+        every transition <span class="java"><span style="">(n-&gt;Q)</span></span>
+        in the definition of <span class="java"><span style="">P</span></span>
+        is replaced with the transitions <span class="java"><span style="">({
+          a</span></span><span class="java"><sub><span style="">1</span></sub></span><span class="java"><span style="">.n,�,a</span></span><sub>x</sub><span class="java"><span style="">.n}-&gt;Q)</span></span>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 100.5pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 100.5pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Priority High <b style=""><span
+        style="font-family: &quot;Courier New&quot;;">&lt;&lt;</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 100.5pt;"
+      valign="top" width="353">
+      <p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">||C =(P||Q)&lt;&lt;{
+        a</span><sub><span style="font-family: &quot;Courier New&quot;;">1</span></sub><span style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span style="font-family: &quot;Courier New&quot;;">n</span></sub><span style="font-family: &quot;Courier New&quot;;">} </span>specifies
+        a composition in which the actions <span
+          style="font-family: &quot;Courier New&quot;;">a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">1</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">n</span></sub>
+        have higher priority than any other action in the alphabet of <span
+          style="font-family: &quot;Courier New&quot;;">P||Q</span>
+        including the silent action <span style="font-family: &quot;Courier New&quot;;">tau</span>. In any
+        choice in this
+        system which has one or more of the actions <span
+          style="font-family: &quot;Courier New&quot;;">a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">1</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">n</span></sub><span
+          style="font-family: &quot;Courier New&quot;;"> </span>labeling
+        a transition, the transitions labeled with lower priority actions are
+        discarded.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 89.25pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 89.25pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Priority Low <b style=""><span
+        style="font-family: &quot;Courier New&quot;;">&gt;&gt;</span></b>
+        <o:p></o:p>
+      </p>
+      <p class="MsoNormal">
+        <o:p>&nbsp;</o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 89.25pt;"
+      valign="top" width="353">
+      <p class="MsoNormal"><span style="font-family: &quot;Courier New&quot;;">||C=(P||Q)&gt;&gt;{
+        a</span><sub><span style="font-family: &quot;Courier New&quot;;">1</span></sub><span style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span style="font-family: &quot;Courier New&quot;;">n</span></sub><span style="font-family: &quot;Courier New&quot;;">} </span>specifies
+        a composition in which the actions <span
+          style="font-family: &quot;Courier New&quot;;">a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">1</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">n</span></sub>
+        have lower priority than any other action in the alphabet of <span
+          style="font-family: &quot;Courier New&quot;;">P||Q</span>
+        including the silent action <span style="font-family: &quot;Courier New&quot;;">tau</span>. In any
+        choice in this
+        system which has one or more transitions not labeled by <span
+          style="font-family: &quot;Courier New&quot;;">a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">1</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">n</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">, </span>the
+        transitions labeled by <span style="font-family: &quot;Courier New&quot;;">a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">1</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">,�,a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">n</span></sub><span
+          style="font-family: &quot;Courier New&quot;;"> </span>are
+        discarded.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<h2><!--[if !supportLists]--><span style="font-family: &quot;Arial Black&quot;;"><span style="">A.3<span
+  style="">&nbsp; </span><span style="">&nbsp;</span></span></span><!--[endif]-->Common
+  Operators</h2>
+<p class="MsoNormal">The operators in Table A.3 may be used in the definition of
+  both processes and composite processes.</p>
+
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable"
+       style="border: medium none ; border-collapse: collapse;">
+  <tbody>
+  <tr style="height: 52.35pt;">
+    <td style="border: 1pt solid windowtext; padding: 0in 5.4pt; width: 90.9pt; height: 52.35pt;" valign="top"
+        width="121">
+      <p class="MsoNormal">Conditional<br>
+        <b style=""><span style="font-family: &quot;Courier New&quot;;">if then else</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 52.35pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">The process<span style="">&nbsp; </span><span class="java"><b style=""><span
+        style="">if</span></b></span><span
+        class="java"><span style=""> B </span></span><span class="java"><b style=""><span
+        style="">then</span></b></span><span class="java"><span style=""> P </span></span><span
+        class="java"><b style=""><span style="">else</span></b></span><span class="java"><span
+        style=""> Q</span></span><span style="">&nbsp; </span>behaves as the process <span
+        class="java"><span style="">P</span></span> if the
+        condition <span class="java"><span style="">B</span></span>
+        is true otherwise it behaves as <span class="java"><span style="">Q</span></span>. If the <span
+          class="java"><b style=""><span style="">else</span></b></span><span class="java"><span
+          style=""> Q</span></span>
+        is omitted and <span class="java"><span style="">B</span></span>
+        is false, then the process behaves as <span class="java"><span style="">STOP</span></span>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 52.35pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 52.35pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Re-labeling <b style=""><i style=""><span
+        style="font-family: &quot;Courier New&quot;;">/</span></i></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 52.35pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">Re-labeling is applied to a process to change the names of
+        action labels. The general form of re-labeling is:<br>
+        /{
+        <i style="">newlabel</i>_1/<i style="">oldlabel</i>_1,� <i style="">newlabel</i>_n/<i style="">oldlabel</i>_n
+        }.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 52.35pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 52.35pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Hiding <b style=""><i style=""><span
+        style="font-family: &quot;Courier New&quot;;"><span style="">&nbsp;</span>\</span></i></b><b
+        style=""><i style=""><span style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></i></b>
+      </p>
+      <p class="MsoNormal"><b style=""><i style=""><span style="font-family: &quot;Courier New&quot;;"><o:p>&nbsp;</o:p></span></i></b>
+      </p>
+      <p class="MsoNormal">
+        <o:p>&nbsp;</o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 52.35pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">When applied to a process <span class="java"><span style="">P,</span></span> the hiding
+        operator <span class="java"><span style="">\{
+          a</span></span><span class="java"><sub><span style="">1</span></sub></span><span class="java"><span style="">..a</span></span><sub>x</sub><span class="java"><span style="">}</span></span>
+        removes the action names <span class="java"><span style="">a</span></span><span class="java"><sub><span
+          style="">1</span></sub></span><span class="java"><span style="">..a</span></span><sub>x</sub>
+        from the alphabet of <span class="java"><span style="">P</span></span>
+        and makes these concealed actions "silent". These silent actions
+        are labeled <span class="java"><span style="">tau</span></span>.<span style="">&nbsp; </span>Silent
+        actions in different processes are
+        not shared.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="height: 52.35pt;">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt; height: 52.35pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Interface <b style=""><span style="font-family: &quot;Courier New&quot;;">@</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 52.35pt;"
+      valign="top" width="353">
+      <p class="MsoNormal">When applied to a process <span class="java"><span style="">P,</span></span> the
+        interface
+        operator <span class="java"><span style="">@{
+          a</span></span><span class="java"><sub><span style="">1</span></sub></span><span class="java"><span style="">..a</span></span><sub>x</sub><span class="java"><span style="">}</span></span>
+        hides all actions in the alphabet of <span class="java"><span style="">P</span></span> not labeled in
+        the set <span class="java"><span style="">a</span></span><span class="java"><sub><span
+          style="">1</span></sub></span><span
+          class="java"><span style="">..a</span></span><sub>x</sub>.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<h2><!--[if !supportLists]--><span style="font-family: &quot;Arial Black&quot;;"><span style="">A.4<span
+  style="">&nbsp; </span><span style="">&nbsp;</span></span></span><!--[endif]-->Properties</h2>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable"
+       style="border: medium none ; border-collapse: collapse;">
+  <tbody>
+  <tr style="height: 36.6pt;">
+    <td style="border: 1pt solid windowtext; padding: 0in 5.4pt; width: 90.9pt; height: 36.6pt;" valign="top"
+        width="121">
+      <p class="MsoNormal">Safety<br>
+        <b style=""><span style="font-family: &quot;Courier New&quot;;">property</span></b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: solid solid solid none; border-color: windowtext windowtext windowtext -moz-use-text-color; border-width: 1pt 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt; height: 36.6pt;"
+      valign="top" width="353">
+      <p class="MsoNormal"><span lang="EN-GB" style="color: black;">A safet</span><span lang="EN-GB"
+                                                                                        style="">y </span><b
+        style=""><span lang="EN-GB" style="font-family: &quot;Courier New&quot;;">property</span></b><span
+        lang="EN-GB" style="font-family: &quot;Courier New&quot;;"> P</span><span lang="EN-GB"
+                                                                                  style=""> d</span><span
+        lang="EN-GB" style="color: black;">efines
+  a deterministic process that asserts that any trace including actions in the
+  alphabet of </span><span lang="EN-GB" style="font-family: &quot;Courier New&quot;; color: black;">P</span><span
+        lang="EN-GB" style="color: black;">, is accepted by </span><span lang="EN-GB"
+                                                                         style="font-family: &quot;Courier New&quot;; color: black;">P</span><span
+        lang="EN-GB" style="color: black;">.</span>
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  <tr style="">
+    <td
+      style="border-style: none solid solid; border-color: -moz-use-text-color windowtext windowtext; border-width: medium 1pt 1pt; padding: 0in 5.4pt; width: 90.9pt;"
+      valign="top" width="121">
+      <p class="MsoNormal">Progress<br>
+        <b style="">progress</b>
+        <o:p></o:p>
+      </p>
+    </td>
+    <td
+      style="border-style: none solid solid none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; border-width: medium 1pt 1pt medium; padding: 0in 5.4pt; width: 265pt;"
+      valign="top" width="353">
+      <p class="MsoToc1"><b style=""><span style="font-family: &quot;Courier New&quot;;">progress</span></b><span
+        style="font-family: &quot;Courier New&quot;;"> P =
+        {a</span><sub><span style="font-family: &quot;Courier New&quot;;">1</span></sub><span style="font-family: &quot;Courier New&quot;;">,a</span><sub><span style="font-family: &quot;Courier New&quot;;">2</span></sub><span style="font-family: &quot;Courier New&quot;;">..a</span><sub><span style="font-family: &quot;Courier New&quot;;">n</span></sub><span style="font-family: &quot;Courier New&quot;;">} </span>defines
+        a progress property <span style="font-family: &quot;Courier New&quot;;">P</span> which asserts that in
+        an infinite execution of a
+        target system, at least one of the actions <span
+          style="font-family: &quot;Courier New&quot;;">a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">1</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">,a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">2</span></sub><span
+          style="font-family: &quot;Courier New&quot;;">..a</span><sub><span
+          style="font-family: &quot;Courier New&quot;;">n</span></sub>
+        will be executed infinitely often.
+        <o:p></o:p>
+      </p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<h2 style="margin-right: 0.15pt;"><!--[if !supportLists]-->
+</h2>
+</body>
+</html>
