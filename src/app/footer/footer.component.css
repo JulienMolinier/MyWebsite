@@ -1,0 +1,47 @@
+:host {
+  background-color: rgb(50, 54, 57);
+  display: flex;
+  color: white;
+  height: 20vh;
+  flex-direction: row;
+  padding-top: 0.5vw;
+  padding-left: 0.5vw;
+}
+
+p {
+  font-family: BBE;
+  font-size: 1.5vw;
+}
+
+.left {
+  width: 33%;
+  align-self: flex-end;
+}
+
+.center {
+  width: 33%;
+  text-align: center;
+  align-self: center;
+}
+
+.copyright {
+  width: 33%;
+  text-align: right;
+  align-self: flex-end;
+}
+
+button {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 1.5vw;
+  font-family: BBE;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 2vw;
+  transform: translate(0%, +25%);
+}

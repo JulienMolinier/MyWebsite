@@ -7,10 +7,20 @@
   </div>
   <br>
   <br>
+  <br>
   <h1>IT Skills</h1>
   <div class="flex">
     <div *ngFor="let itSkill of itSkillsList" class="card">
       <app-itskill-card [itSkill]="itSkill"></app-itskill-card>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <h1>Hobbies</h1>
+  <div class="flex">
+    <div *ngFor="let hobby of hobbiesList" class="card">
+      <app-hobby-card [hobby]="hobby"></app-hobby-card>
     </div>
   </div>
 

@@ -1,17 +1,17 @@
 mat-card {
-  width: 70%;
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2%;
+  margin-top: 2vw;
 }
 
 img {
-  width: 15em;
+  width: 15vw;
   border-radius: 50%;
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  box-shadow: 1px 1px 12px #555;
+  box-shadow: 0.1vw 0.1vw 1vw #555;
 }
 
 mat-card-content {
@@ -21,25 +21,41 @@ mat-card-content {
 }
 
 .details {
-  width: 40%;
-}
-
-.pic {
+  width: 40vw;
 }
 
 h1 {
   font-family: BBE;
-  font-size: 3em;
+  font-size: 2vw;
 }
 
 h3 {
   font-family: BBE;
-  font-size: 2em;
+  font-size: 1.5vw;
   color: #555555;
 }
 
 p {
   font-family: BBE;
-  font-size: 2em;
+  font-size: 1.5vw;
   color: #555555;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  img {
+    width: 30vw;
+
+  }
 }
