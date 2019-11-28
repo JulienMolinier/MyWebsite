@@ -2,15 +2,16 @@
   background-color: rgb(50, 54, 57);
   display: flex;
   color: white;
-  height: 20vh;
   flex-direction: row;
-  padding-top: 0.5vw;
-  padding-left: 0.5vw;
+  padding-top: 1vh;
+  padding-left: 1vh;
+  padding-bottom: 1vh;
 }
 
 .left {
   width: 33%;
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
 }
 
 p {
@@ -26,7 +27,7 @@ p {
 .copyright {
   width: 33%;
   text-align: right;
-  align-self: flex-end;
+  align-self: center;
 }
 
 button {
@@ -41,6 +42,6 @@ button {
 }
 
 img {
-  width: 2vw;
-  transform: translate(0%, +25%);
+  width: 3%;
+  margin-left: 0.5vw;
 }

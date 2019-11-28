@@ -10,8 +10,6 @@
 
 h1 {
   text-align: center;
-  font-family: BBE;
-  font-size: 3.5vw;
 }
 
 .mail {
@@ -21,11 +19,6 @@ h1 {
 
 div {
   text-align: center;
-}
-
-p {
-  font-family: BBE;
-  font-size: 2vw;
 }
 
 a {
@@ -41,33 +34,5 @@ a {
 
 .body {
   margin-bottom: 5%;
-}
-
-@media (max-width: 450px) {
-  h1 {
-    text-align: center;
-    font-family: BBE;
-    font-size: 8vw;
-  }
-
-  p {
-    font-family: BBE;
-    font-size: 6vw;
-  }
-
-  .linkedin {
-    width: 4vw;
-    margin-right: 2vw;
-  }
-
-  .mail {
-    width: 4vw;
-    margin-right: 2vw;
-  }
-
-  .github {
-    width: 4vw;
-    margin-right: 2vw;
-  }
-
+  margin-top: 5vh;
 }

@@ -1,17 +1,12 @@
 div {
   text-align: center;
-  margin-top: 2%;
+  margin-top: 5vh;
   margin-bottom: 5%;
 }
 
 iframe {
   height: 40vw;
   width: 30vw;
-}
-
-h1 {
-  font-family: BBE;
-  font-size: 3.5vw;
 }
 
 
