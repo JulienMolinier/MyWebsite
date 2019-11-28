@@ -9,14 +9,7 @@
 }
 
 h1 {
-  font-family: GOB;
-  font-size: 1.5vw;
-  margin-bottom: -1vw;
-}
-
-h3 {
-  font-family: BBE;
-  font-size: 2vw;
+  margin-bottom: -1vh;
 }
 
 .buttons {
@@ -32,8 +25,8 @@ mat-icon {
 
 span {
   display: none;
-  font-family: BBE;
-  font-size: 2vw;
+  font-family: RobotoLight;
+  font-size: 150%;
 }
 
 button:hover span {
@@ -41,7 +34,7 @@ button:hover span {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translate(-50%, +0.5vw);
+  transform: translate(-50%, +0.5vh);
 }
 
 button {
@@ -73,46 +66,4 @@ button {
   height: fit-content;
   color: white;
   text-align: center;
-}
-
-@media (max-width: 450px) {
-  h1 {
-    font-size: 2.5vw;
-  }
-
-  button:hover span {
-    transform: translate(-50%, -25%);
-  }
-
-  h3 {
-    font-size: 3vw;
-  }
-
-  button {
-    height: 3em;
-    width: 3em;
-  }
-
-  span {
-    display: none;
-    font-family: BBE;
-    font-size: 3vw;
-  }
-
-  .profilePic {
-    margin-bottom: 4vw;
-    height: 20vw;
-    width: 20vw;
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    padding-top: 4vw;
-    width: fit-content;
-    height: fit-content;
-    color: white;
-    text-align: center;
-  }
 }

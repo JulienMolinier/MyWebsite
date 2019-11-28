@@ -8,14 +8,13 @@
   padding-left: 0.5vw;
 }
 
-p {
-  font-family: BBE;
-  font-size: 1.5vw;
-}
-
 .left {
   width: 33%;
   align-self: flex-end;
+}
+
+p {
+  font-size: 100%;
 }
 
 .center {
@@ -34,7 +33,7 @@ button {
   margin-left: 1vw;
   margin-right: 1vw;
   font-size: 1.5vw;
-  font-family: BBE;
+  font-family: RobotoLight;
   background-color: transparent;
   color: white;
   border: none;
