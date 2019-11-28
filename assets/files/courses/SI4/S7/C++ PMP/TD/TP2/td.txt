@@ -1,0 +1,5 @@
+EXO1
+on n'initialise pas le pointeur sur la string s donc il pointe vers n'importe quoi. Ensuite il est initialisé donc on affiche bien toto.
+
+EXO2
+
