@@ -5,9 +5,9 @@ export const EDUCATION_MOCKED: Education[] = [
     diploma: 'Graduate School Of Engineering',
     school: 'Polytech Nice Sophia',
     location: 'University of Nice-Sophia-Antipolis (France)',
-    description: 'Second year of a master’s degree in engineering specialized in computer science, 16th out of 103 in first year',
+    description: 'Master’s degree in engineering specialized in cybersecurity in applications and networks.',
     picturePath: 'assets/images/polytechNice.jpg',
-    linkToSchoolWebsite: 'http://www.polytech.unice.fr/',
+    linkToSchoolWebsite: 'https://polytech.univ-cotedazur.fr/',
   },
   {
     diploma: 'Cycle Intégré Préparatoire',
